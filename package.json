@@ -1,0 +1,11 @@
+{
+  "name": "rag-college-chatbot-root",
+  "version": "1.0.0",
+  "description": "CampusBrain AI - RAG-Based College AI Chatbot & Multi-Document Knowledge Hub",
+  "scripts": {
+    "install:all": "cd server && npm install && cd ../client && npm install",
+    "start:server": "cd server && npm start",
+    "start:client": "cd client && npm run dev",
+    "build:client": "cd client && npm run build"
+  }
+}
