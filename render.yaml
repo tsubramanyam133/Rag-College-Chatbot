@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: campusbrain-rag-backend
+    env: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SIMILARITY_THRESHOLD
+        value: "0.20"
+      - key: TOP_K_RESULTS
+        value: "4"
